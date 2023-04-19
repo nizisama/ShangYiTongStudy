@@ -9,41 +9,23 @@
 
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>service_user</artifactId>
-    <name>Archetype - service_user</name>
+    <artifactId>service_hosp</artifactId>
+    <name>Archetype - service_hosp</name>
     <url>http://maven.apache.org</url>
 
+
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
-
-
-
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-mongodb</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>jw.hospital</groupId>-->
-<!--            <artifactId>service_cmn_client</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>jw.hospital</groupId>-->
-<!--            <artifactId>rabbit_util</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
 
     </dependencies>
-
-
-
-
 
     <build>
         <finalName>service-hosp</finalName>
@@ -55,4 +37,3 @@
         </plugins>
     </build>
 </project>
-

@@ -4,12 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>common</module>
-        <module>common/common_util</module>
-        <module>common/common_util/service_util</module>
         <module>model</module>
         <module>service</module>
-        <module>service/service_user</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -26,7 +33,7 @@
 
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
         <springframeVersion>2022.0.2</springframeVersion>
         <springcloudali>2022.0.0.0-RC1</springcloudali>
         <myBatisVersion>3.5.3.1</myBatisVersion>
@@ -130,12 +137,15 @@
     </dependencies>
     </dependencyManagement>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>
